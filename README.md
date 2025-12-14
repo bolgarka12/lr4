@@ -53,7 +53,7 @@ export EMPIRE_LISTEN_PORT=1337
 ./ps-empire server
 ```
 Если все выполено верно будет выведено следующее:  
-![Результ запуска сервера](source/server.jpg)
+![Результ запуска сервера](source/server.jpg)  
 
 После этого на машине жертвы в браузере вводим в адресную строку http://192.168.100.10:1337 и получаем доступ к Starkiller  
 ![Starkiller](source/Starkiller.jpg)  
