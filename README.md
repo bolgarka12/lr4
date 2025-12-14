@@ -66,12 +66,15 @@ nano config.yaml
 ## Этап 4 Генерация полезной нагрузки и доставка до жертвы
 
 В Starkiller создаем HTTP Listener заполняем данные  
-![Создание listener](source/listener.jpg)  
+![Создание listener](source/listener.jpg)      
+
+
 После генерируем stager типа launcher_bat выбираем созданный нами listener   
-![Создание stager](source/stager.jpg)  
+![Создание stager](source/stager.jpg)    
 
 После чего скачиваем файл на машину жертвы и запускаем, на сайте покажется новый агент. **Важно:** на компьютере жертве должен быть отключен Windows Defender  
-![Отображение агента](source/agent.jpg)
+![Отображение агента](source/agent.jpg)  
+
 
 Мы получили удаленный доступ к машине жертвы, можем просматривать дериктории выолнять команды в cmd  
 ![Дериктории](source/dir.jpg)  
@@ -80,8 +83,8 @@ nano config.yaml
 ## Принципы работы C2-фреймворка
 Empire реализует современную C2-архитектуру:
 
-Listener — ожидает подключения агентов (HTTP/S, SMB и др.).
-Payload — генерируется на сервере, содержит зашифрованный beacon.
-Agent — выполняется в памяти (fileless), использует advanced obfuscation (ConfuserEx, Invoke-Obfuscation).
-Коммуникация — полностью шифруется, имитирует легитимный трафик (JA3/S и JARM evasion).
-Управление — через Starkiller GUI с поддержкой нескольких операторов.
+- Listener — ожидает подключения агентов (HTTP/S, SMB и др.).
+- Payload — генерируется на сервере, содержит зашифрованный beacon.
+- Agent — выполняется в памяти (fileless), использует advanced obfuscation (ConfuserEx, Invoke-Obfuscation).
+- Коммуникация — полностью шифруется, имитирует легитимный трафик (JA3/S и JARM evasion).
+- Управление — через Starkiller GUI с поддержкой нескольких операторов.
